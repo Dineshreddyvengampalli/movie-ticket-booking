@@ -5,9 +5,9 @@ router.get("/", function (req, res, next) {
   res.send("hi employees");
 });
 
-router.get("/movie/:movieName", controller.getMoviesByName);
+router.get("/movie", controller.getMoviesByName);
 
-router.get("/location/:location", controller.getTheatersByName);
+router.get("/location", controller.getTheatersByName);
 
 router.get("/show", controller.getShowTimings);
 
@@ -15,10 +15,10 @@ router.post("/movie", controller.addMovies);
 
 router.post("/theater", controller.addTheater);
 
-router.post("/showTime", controller.addShowTime);
+router.post("/show", controller.addShowTime);
 
-router.post("/bookTickets", controller.bookTickets);
+router.post("/ticket", controller.bookTickets);
 
-router.put("/:id", controller.rescheduleBooking);
+router.put("/ticket/:id", controller.rescheduleBooking);
 
 module.exports = router;

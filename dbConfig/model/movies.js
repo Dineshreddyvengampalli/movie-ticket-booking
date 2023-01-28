@@ -2,7 +2,13 @@ let mongoose = require("mongoose");
 let schema = mongoose.Schema;
 
 const Movies = new schema({
-  movie_title: {
+  title: {
+    type: String,
+  },
+  description: {
+    type: String,
+  },
+  language: {
     type: String,
   },
 });

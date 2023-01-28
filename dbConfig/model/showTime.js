@@ -2,10 +2,10 @@ let mongoose = require("mongoose");
 let schema = mongoose.Schema;
 
 const showsTime = new schema({
-  show_Type: {
+  Type: {
     type: String,
   },
-  show_Timing: {
+  Timing: {
     type: String,
   },
 });

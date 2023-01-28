@@ -2,6 +2,9 @@ let mongoose = require("mongoose");
 let schema = mongoose.Schema;
 
 const bookTicket = new schema({
+  user: {
+    type: String,
+  },
   theater_Id: {
     type: String,
   },

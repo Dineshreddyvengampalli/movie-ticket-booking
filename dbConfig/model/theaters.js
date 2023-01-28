@@ -2,7 +2,7 @@ let mongoose = require("mongoose");
 let schema = mongoose.Schema;
 
 const theaters = new schema({
-  theaters_name: {
+  name: {
     type: String,
   },
   location: {

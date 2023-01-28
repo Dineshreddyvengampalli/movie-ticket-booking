@@ -5,7 +5,7 @@ const bookTicket = require("../dbConfig/model/bookTicket");
 
 const getMoviesByName = async (req, res) => {
   try {
-    const mov = await Movies.findById(req.params.movieName);
+    const mov = await Movies.find({ title: req.query.title });
     return res.json({
       Status: 200,
       movie: mov,
@@ -20,10 +20,10 @@ const getMoviesByName = async (req, res) => {
 
 const getTheatersByName = async (req, res) => {
   try {
-    const thea = await theaters.findById(req.params.location);
+    const thea = await theaters.find({ location: req.query.location });
     return res.json({
       Status: 200,
-      Employee: thea,
+      theater: thea,
     });
   } catch (err) {
     return res.json({
@@ -35,10 +35,10 @@ const getTheatersByName = async (req, res) => {
 
 const getShowTimings = async (req, res) => {
   try {
-    const bT = await bookTicket.find();
+    const bT = await showsTime.find();
     return res.json({
       Status: 200,
-      Employee: bT,
+      showsTime: bT,
     });
   } catch (err) {
     return res.json({
@@ -49,10 +49,12 @@ const getShowTimings = async (req, res) => {
 };
 
 const addMovies = async (req, res) => {
-  const { movie_title } = req.body;
+  const { title, description, language } = req.body;
   try {
     const movies = new Movies({
-      movie_title,
+      title,
+      description,
+      language,
     });
     const mov = await movies.save();
     return res.json({
@@ -68,10 +70,10 @@ const addMovies = async (req, res) => {
 };
 
 const addTheater = async (req, res) => {
-  const { theaters_name, location, movies } = req.body;
+  const { name, location, movies } = req.body;
   try {
     const theater = new theaters({
-      theaters_name,
+      name,
       location,
       movies,
     });
@@ -89,11 +91,11 @@ const addTheater = async (req, res) => {
 };
 
 const addShowTime = async (req, res) => {
-  const { show_Type, show_Timing } = req.body;
+  const { Type, Timing } = req.body;
   try {
     const shows = new showsTime({
-      show_Type,
-      show_Timing,
+      Type,
+      Timing,
     });
     const show = await shows.save();
     return res.json({
@@ -109,9 +111,10 @@ const addShowTime = async (req, res) => {
 };
 
 const bookTickets = async (req, res) => {
-  const { theater_Id, movie_Id, show_Id } = req.body;
+  const { user, theater_Id, movie_Id, show_Id } = req.body;
   try {
     const shows = new bookTicket({
+      user,
       theater_Id,
       movie_Id,
       show_Id,
@@ -120,7 +123,7 @@ const bookTickets = async (req, res) => {
     return res.json({
       Status: 200,
       shows: show,
-      msg: "completed Successfully",
+      msg: "Successfully booked",
     });
   } catch (err) {
     return res.json({
@@ -131,16 +134,17 @@ const bookTickets = async (req, res) => {
 };
 
 const rescheduleBooking = async (req, res) => {
-  const { theater_Id, movie_Id, show_Id } = req.body;
+  const { user, theater_Id, movie_Id, show_Id } = req.body;
   try {
     const ticketData = await bookTicket.findById(req.params.id);
-    (ticketData.theater_Id = theater_Id),
+    (ticketData.user = user),
+      (ticketData.theater_Id = theater_Id),
       (ticketData.movie_Id = movie_Id),
       (ticketData.show_Id = show_Id);
-    let bookTicket = await ticketData.save();
+    let updateTicket = await ticketData.save();
     return res.json({
       Status: 200,
-      bT: bookTicket,
+      bT: updateTicket,
     });
   } catch (err) {
     return res.json({
