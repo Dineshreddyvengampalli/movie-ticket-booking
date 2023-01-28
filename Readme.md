@@ -1,7 +1,7 @@
 
 Movie_ticket_booking used teq MongoDB, Expressjs, Nodejs
 
-![[Pasted image 20230128172405.png]]
+[[Pasted image 20230128172405.png]]
 
 
 ## Features!
