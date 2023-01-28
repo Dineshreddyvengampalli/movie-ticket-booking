@@ -32,7 +32,7 @@ Movie_ticket_booking used teq MongoDB, Expressjs, Nodejs
 
 ![[Pasted image 20230128174418.png]]
 
-![[Pasted image 20230128174604.png]]
+![image](https://user-images.githubusercontent.com/73506478/215266869-0c52e849-1f30-4ac9-abac-4b76f75ae20a.png)
 
 ## **POST:** movies / movie
 
