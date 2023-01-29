@@ -10,11 +10,9 @@ Movie_ticket_booking used technologies MongoDB, Expressjs, Nodejs
 
 - nodejs -> v19.5.0
 - npm -> 9.3.1
-- express -> ^4.18.2
-- mongoose -> ^6.9.0
-- dotenv -> ^16.0.3
+- mongoDB -> v5.0.5
 
-- **This are NPM packages and versions used in this project**.
+- **These are versions used in this project**.
 
 ## step 2 : how to clone and install
 
