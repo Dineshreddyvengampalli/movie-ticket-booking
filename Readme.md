@@ -18,7 +18,7 @@ Movie_ticket_booking used technologies MongoDB, Expressjs, Nodejs
 
 ## step 2 : how to clone and install
 
--git clone https://github.com/VemulaPaavanaSaiKumar18/movie-ticket-bookings.git
+-git clone https://github.com/VemulaPaavanaSaiKumar18/movie-ticket-booking.git
 
 - npm install
 
