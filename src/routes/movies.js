@@ -1,8 +1,9 @@
 var express = require("express");
 var router = express.Router();
-const controller = require("../src/controller");
+const controller = require("../controller/controller");
+
 router.get("/", function (req, res, next) {
-  res.send("hi employees");
+  res.send("Hello from root ! ");
 });
 
 router.get("/movie", controller.getMoviesByName);

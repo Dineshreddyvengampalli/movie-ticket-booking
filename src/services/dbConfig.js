@@ -1,4 +1,5 @@
 let mongoose = require("mongoose");
+mongoose.set("strictQuery", false);
 require("dotenv").config();
 
 mongoose.connect(process.env.mongoCluster, (err, res) => {

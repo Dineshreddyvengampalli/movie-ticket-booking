@@ -1,9 +1,33 @@
-#Movie_Ticket_Booking
-Movie_ticket_booking used teq MongoDB, Expressjs, Nodejs
+# Movie_Ticket_Booking
 
-![image](https://user-images.githubusercontent.com/73506478/215267352-1e46627e-18ae-4873-bdd0-28ec77df1afd.png)
+Movie_ticket_booking used technologies MongoDB, Expressjs, Nodejs
 
-## Features!
+![image](https://user-images.githubusercontent.com/73506478/215283920-2e7ddfa2-0a23-4e4b-a192-b04abfd4ffc0.png)
+
+# How to use
+
+## step 1 : prerequisites
+
+- nodejs -> v19.5.0
+- npm -> 9.3.1
+- express -> ^4.18.2
+- mongoose -> ^6.9.0
+- dotenv -> ^16.0.3
+
+- **This are NPM packages and versions used in this project**.
+
+## step 2 : how to clone and install
+
+-git clone https://github.com/VemulaPaavanaSaiKumar18/movie-ticket-bookings.git
+
+- npm install
+
+- npm start
+- check the terminal
+
+![image](https://user-images.githubusercontent.com/73506478/215283951-44e588a0-2747-4183-9746-7b0c09c97b38.png)
+
+## step 3 : Features! to use and check it
 
 - **GET:** movies / movie
 - **GET:** movies / location
@@ -14,50 +38,52 @@ Movie_ticket_booking used teq MongoDB, Expressjs, Nodejs
 - **POST:** movies / ticket
 - **PUT:** movies / ticket/:id
 
-## **GET:** movies / movie
+### **GET:** movies / movie
 
 - **/movie** route is used to get a movie with the **movie name**.
-  ![image](https://user-images.githubusercontent.com/73506478/215267357-c1f032cb-a767-463b-a5bb-990e622f97c0.png)
+  ![image](https://user-images.githubusercontent.com/73506478/215283968-280e856c-5c8d-4395-8024-b2289fffa277.png)
 
-## **GET:** movies / location
+### **GET:** movies / location
 
 - **/location** route is used to get the name of the theatre with **location**. 
-  ![image](https://user-images.githubusercontent.com/73506478/215267371-1ea6e51e-5a4c-40f5-a3bf-d646c4a96a93.png)
+  ![image](https://user-images.githubusercontent.com/73506478/215283985-2a2e308c-231a-45a1-9bf6-bce18432bf58.png)
 
-## **GET:** movies / show
+### **GET:** movies / show
 
 - **/show** route is used get all **show timings**.
 
-![image](https://user-images.githubusercontent.com/73506478/215267442-0e6de539-adbd-4e8d-881a-140a81b1d1ab.png)
+![image](https://user-images.githubusercontent.com/73506478/215284005-5dc83d13-5642-4442-a519-cd641c42717c.png)
 
-![image](https://user-images.githubusercontent.com/73506478/215267407-54994202-6e01-40f8-8fb4-d4d7b2d774b2.png)
+![image](https://user-images.githubusercontent.com/73506478/215284022-1e2f5ccc-09b1-4faa-b834-98a35505718a.png)
 
-## **POST:** movies / movie
+### **POST:** movies / movie
 
 - **/movie** route is used to post **new movies** in DB.
 
-![image](https://user-images.githubusercontent.com/73506478/215267455-ed5d130c-242d-4d1f-81c5-625cec6c2061.png)
+![image](https://user-images.githubusercontent.com/73506478/215284039-920f3e5e-57bf-4056-ae9a-5cfefce5977b.png)
 
-## **POST:** movies / theater
+### **POST:** movies / theater
 
 - **/theater** route is used to post **new theaters** in DB.
 
-![image](https://user-images.githubusercontent.com/73506478/215267392-4922b92d-a7cb-4bde-87bc-66ee58895c73.png)
+![image](https://user-images.githubusercontent.com/73506478/215284054-a37c169a-88c6-48ce-93a2-2e0b37332c76.png)
 
-## **POST:** movies / show
+### **POST:** movies / show
 
 - **/show** route is used to post **show timings** in DB.
 
-![image](https://user-images.githubusercontent.com/73506478/215267761-3acb0b2e-72e6-426d-a9f4-47cab8c56f6f.png)
+![image](https://user-images.githubusercontent.com/73506478/215284067-5498d7a1-6588-4ebb-aca7-b4fdfdb92b53.png)
 
-## **POST:** movies / ticket
+### **POST:** movies / ticket
 
 - **/ticket** route is used to post **booked tickets** in DB.
 
-![image](https://user-images.githubusercontent.com/73506478/215267680-08ca18db-5709-48a4-bb1b-f3e0b4740049.png)
+![image](https://user-images.githubusercontent.com/73506478/215284089-ef27675d-260a-4aa8-970e-188feabe151a.png)
 
-## **PUT:** movies / ticket/:id
+### **PUT:** movies / ticket/:id
 
 - **/ticket/:id** route is used to put **reschedule booked tickets** in DB.
 
-![image](https://user-images.githubusercontent.com/73506478/215267701-362eb9cc-5213-4e72-8121-a090a740bf24.png)
+![image](https://user-images.githubusercontent.com/73506478/215284106-88480881-fff9-4db1-9429-7fa45d9598db.png)
+
+**thank you**,

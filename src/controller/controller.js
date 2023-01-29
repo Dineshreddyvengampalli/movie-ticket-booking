@@ -1,7 +1,7 @@
-const Movies = require("../dbConfig/model/movies");
-const showsTime = require("../dbConfig/model/showTime");
-const theaters = require("../dbConfig/model/theaters");
-const bookTicket = require("../dbConfig/model/bookTicket");
+const Movies = require("../model/movies");
+const showsTime = require("../model/showTime");
+const theaters = require("../model/theaters");
+const bookTicket = require("../model/bookTicket");
 
 const getMoviesByName = async (req, res) => {
   try {
